@@ -1,0 +1,23 @@
+{
+  "name": "PWA Starter Kit",
+  "description": "Some witty description",
+  "short_name": "PWASK",
+  "icons": [
+    {
+      "src": "./favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "./?utm_source=manifest",
+  "theme_color": "#94c6ff",
+  "background_color": "#ffffff"
+}
