@@ -6,6 +6,8 @@ Snippets for kick-starting your PWA.
 Instructions
 ------------
 
+All required template files are in `/htdocs`.
+
 1. Create PNG icons with 192×192 pixels and 512×512 pixels and put them under your document root.
 1. Copy `manifest.json` to your document root,
    1. …and add the URLs of your PNG icons under `icons`.
