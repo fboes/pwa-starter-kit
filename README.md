@@ -9,11 +9,11 @@ Instructions
 All required template files are in `/htdocs`.
 
 1. Create PNG icons with 192×192 pixels and 512×512 pixels and put them under your document root.
-1. Run `./setup.sh` to customize your snippets to your application's settings _or_ customize your settings manually (see below).
-1. Copy `manifest.json` to your document root.
-1. Copy `sw.js` to the same folder as `manifest.json`.
-1. Copy HTML from `index.html`'s `<head />` to your template's `<head />`.
-1. Copy HTML from `index.html`'s `<script />` to your template's footer section.
+1. Run [`./setup.sh`](setup.sh) to customize your snippets to your application's settings _or_ customize your settings manually (see below).
+1. Copy [`manifest.json`](htdocs/manifest.json) to your document root.
+1. Copy [`sw.js`](htdocs/sw.js) to the same folder as `manifest.json`.
+1. Copy HTML from [`index.html`](htdocs/index.html)'s `<head />` to your template's `<head />`.
+1. Copy HTML from [`index.html`](htdocs/index.html)'s `<script />` to your template's footer section.
 
 ### Manually changing values in `mainfest.json`
 
