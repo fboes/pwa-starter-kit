@@ -5,6 +5,7 @@ TGT_DIRECTORY=tmp
 
 read -p "Application name            : " APP_NAME
 read -p "Short name (max. 12 chars)  : " SHORT_NAME
+read -p "Description                 : " DESCRIPTION
 read -p "Theme color (e.g. '#94c6ff'): " THEME_COLOR
 read -p "Base URL path (e.g. '/')    : " BASE_URL
 read -p "Path to icons (e.g. 'img/') : " ICON_DIR
@@ -17,7 +18,7 @@ BASE_URL=${BASE_URL:-./}
 cp -r htdocs $TGT_DIRECTORY
 cd $TGT_DIRECTORY
 
-sed -i'' -e "s%PWA Starter Kit%$APP_NAME%g;s%PWASK%$SHORT_NAME%g;s%#94c6ff%$THEME_COLOR%g;s%\./favicon%${BASE_URL}${ICON_DIR}favicon%g;s%\./%${BASE_URL}%g" *.html *.json *.js
+sed -i'' -e "s%PWA Starter Kit%$APP_NAME%g;s%PWASK%$SHORT_NAME%g;s%Kick-starting your PWA%$DESCRIPTION%g;s%#94c6ff%$THEME_COLOR%g;s%\./favicon%${BASE_URL}${ICON_DIR}favicon%g;s%\./%${BASE_URL}%g" *.html *.json *.js
 
 if [[ "$ICON_DIR" ]]; then
   mkdir -p $ICON_DIR && mv *.png $ICON_DIR

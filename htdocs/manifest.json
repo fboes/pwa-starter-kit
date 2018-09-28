@@ -1,7 +1,7 @@
 {
   "name": "PWA Starter Kit",
-  "description": "Some witty description",
   "short_name": "PWASK",
+  "description": "Kick-starting your PWA",
   "icons": [
     {
       "src": "./favicon-192x192.png",
