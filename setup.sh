@@ -24,4 +24,4 @@ if [[ "$ICON_DIR" ]]; then
 fi
 
 echo ""
-echo "> Done generating files in $TGT_DIRECTORY"
+echo "> Done generating files in /$TGT_DIRECTORY"
