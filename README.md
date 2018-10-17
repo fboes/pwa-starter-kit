@@ -31,7 +31,7 @@ For more information see the [documentation on `manifest.json` at MDN](https://d
 Validation
 ----------
 
-* [ ] Open Chrome Desktop > Inspector (`F12`) > Audits and run a "PWA audit"
+* [ ] Open "Chrome Desktop > Inspector (`F12`) > Audits" and run a "PWA audit"
 * [ ] Open Firefox Mobile and check if ["Add to homescreen" (A2HS)](https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Add_to_home_screen) shows up
 
 More ressources
