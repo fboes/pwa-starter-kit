@@ -28,8 +28,26 @@ For more information see the [documentation on `manifest.json` at MDN](https://d
 1. Change icon URLs to match your PNG icon URLs.
 1. Change `theme-color` to match your theme color.
 
+### Designing your own icons
+
+If you are designing icons for your PWA you should consider the following guidelines:
+
+* [ ] Use PNG images
+* [ ] At least supply sizes 192×192 pixels and 512×512 pixels
+* [ ] You might want to consider circular icons on transparent background for Android 8+.
+
+You may want to use [ImageMagick](http://www.imagemagick.org/) to convert your images:
+
+```shell
+for SIZE in "192x192" "512x512"; do
+  convert original.png -resize "${SIZE}^" -gravity center -crop ${SIZE}+0+0 +repage favicon-${SIZE}.png
+done
+```
+
 Validation
 ----------
+
+Before relasing your PWA to the open public you should at least test the following cases:
 
 * [ ] Open "Chrome Desktop > Inspector (`F12`) > Audits" and run a "PWA audit"
 * [ ] Open Firefox Mobile and check if ["Add to homescreen" (A2HS)](https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Add_to_home_screen) shows up
