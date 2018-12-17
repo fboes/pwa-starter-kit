@@ -34,13 +34,25 @@ If you are designing icons for your PWA you should consider the following guidel
 
 * [ ] Use PNG images
 * [ ] At least supply sizes 192×192 pixels and 512×512 pixels
-* [ ] You might want to consider circular icons on transparent background for Android 8+.
+* [ ] You might want to use circular icons on transparent background for Android 8+
 
-You may want to use [ImageMagick](http://www.imagemagick.org/) to convert your images:
+You may want to use [ImageMagick](http://www.imagemagick.org/) to convert your images to rectangular icons…
 
 ```shell
 for SIZE in "192x192" "512x512"; do
   convert original.png -resize "${SIZE}^" -gravity center -crop ${SIZE}+0+0 +repage favicon-${SIZE}.png
+done
+```
+
+…or circular icons:
+
+```shell
+# @see http://www.imagemagick.org/Usage/thumbnails/#rounded
+for SIZE in "192x192" "512x512"; do
+  convert original.png -resize "${SIZE}^" -gravity center -crop ${SIZE}+0+0 \
+  -alpha set \( +clone -distort DePolar 0 -virtual-pixel HorizontalTile -background None -distort Polar 0 \) \
+  -compose Dst_In -composite -trim \
+  +repage favicon-${SIZE}.png
 done
 ```
 
