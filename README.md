@@ -34,7 +34,7 @@ If you are designing icons for your PWA you should consider the following guidel
 
 * [ ] Use PNG images
 * [ ] At least supply sizes 192×192 pixels and 512×512 pixels
-* [ ] You might want to use circular icons on transparent background for Android 8+
+* [ ] You might want to [consider the safe zone for Android 8+ icons](https://css-tricks.com/maskable-icons-android-adaptive-icons-for-your-pwa/)
 
 You may want to use [ImageMagick](http://www.imagemagick.org/) to convert your images to rectangular icons…
 
