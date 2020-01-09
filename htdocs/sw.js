@@ -2,7 +2,7 @@
 // @see https://pwabuilder.com
 'use strict';
 
-const CACHE = "blogophon";
+const CACHE = "pwa-starter-kit";
 
 const offlineFallbackPage = "index.html";
 
