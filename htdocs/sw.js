@@ -4,7 +4,7 @@
 
 const CACHE = 'pwa-starter-kit';
 
-const offlineFallbackPage = 'index.html';
+const offlineFallbackPage = './';
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
