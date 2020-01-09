@@ -18,10 +18,8 @@
 
     <!-- PWA: Add to end of <body> START -->
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('./sw.js');
-        });
+      if ('serviceWorker' in navigator && !navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register('./sw.js');
       }
     </script>
     <!-- PWA: Add to end of <body> END -->
