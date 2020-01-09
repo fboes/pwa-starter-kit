@@ -1,12 +1,12 @@
-/* eslint-env browser, worker */
+/* eslint-env worker, es6 */
 // @see https://pwabuilder.com
 'use strict';
 
-const CACHE = "pwa-starter-kit";
+const CACHE = 'pwa-starter-kit';
 
-const offlineFallbackPage = "index.html";
+const offlineFallbackPage = 'index.html';
 
-self.addEventListener("install", function (event) {
+self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE).then(function (cache) {
       return cache.add(offlineFallbackPage);
@@ -14,8 +14,10 @@ self.addEventListener("install", function (event) {
   );
 });
 
-self.addEventListener("fetch", function (event) {
-  if (event.request.method !== "GET") return;
+self.addEventListener('fetch', function (event) {
+  if (event.request.method !== 'GET') {
+    return;
+  }
 
   event.respondWith(
     fetch(event.request)
@@ -23,7 +25,7 @@ self.addEventListener("fetch", function (event) {
         event.waitUntil(updateCache(event.request, response.clone()));
         return response;
       })
-      .catch(function (error) {
+      .catch(function () {
         return fromCache(event.request);
       })
   );
@@ -32,8 +34,8 @@ self.addEventListener("fetch", function (event) {
 function fromCache(request) {
   return caches.open(CACHE).then(function (cache) {
     return cache.match(request).then(function (matching) {
-      if (!matching || matching.status === 404) {
-        return Promise.reject("no-match");
+      if (!matching || matching.status >= 400) {
+        return Promise.reject('no-match');
       }
 
       return matching;
