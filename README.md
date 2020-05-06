@@ -13,7 +13,7 @@ All required template files are in `/htdocs`.
 1. Copy [`manifest.json`](htdocs/manifest.json) to your application root directory.
 1. Copy [`sw.js`](htdocs/sw.js) to the same folder as `manifest.json`.
 1. Copy HTML from [`index.html`](htdocs/index.html)'s `<head />` to your template's `<head />`. In case you are using AMP pages, copy HTML from [`amp.html`](htdocs/amp.html)'s `<head />` to your template's `<head />`.
-1. Copy HTML from [`index.html`](htdocs/index.html)'s `<script />` to your template's footer section. In case you are using AMP pages, copy HTML from [`amp.html`](htdocs/amp.html)'s `<head />` to your template's `<head />`.
+1. Copy HTML from [`index.html`](htdocs/index.html)'s `<script />` to your template's footer section. In case you are using AMP pages, copy HTML from [`amp.html`](htdocs/amp.html)'s `<amp-install-serviceworker />` to your template's footer section.
 
 ### Manually changing values in `manifest.json`
 
